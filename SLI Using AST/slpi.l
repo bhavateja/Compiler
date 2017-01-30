@@ -1,7 +1,8 @@
 %{
-	#include <stdio.h>
+	#include <bits/stdc++.h>
+    using namespace std;
+
 	#include "y.tab.h"
-	#include <stdlib.h>
     int number;
 %}
 

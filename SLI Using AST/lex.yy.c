@@ -479,11 +479,12 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "slpi.l"
 #line 2 "slpi.l"
-	#include <stdio.h>
+	#include <bits/stdc++.h>
+    using namespace std;
+
 	#include "y.tab.h"
-	#include <stdlib.h>
     int number;
-#line 487 "lex.yy.c"
+#line 488 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -701,10 +702,10 @@ YY_DECL
 		}
 
 	{
-#line 8 "slpi.l"
+#line 9 "slpi.l"
 
 
-#line 708 "lex.yy.c"
+#line 709 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -763,86 +764,86 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 10 "slpi.l"
+#line 11 "slpi.l"
 {number = atoi(yytext); yylval = tokenNode(1,number); return NUM;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "slpi.l"
+#line 12 "slpi.l"
 { yylval = tokenNode(3, -1, yytext[0]); return PLUS;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 12 "slpi.l"
+#line 13 "slpi.l"
 {yylval = tokenNode(3, -1, yytext[0]); return MINUS;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 13 "slpi.l"
+#line 14 "slpi.l"
 { yylval = tokenNode(3, -1, yytext[0]); return MUL;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 14 "slpi.l"
+#line 15 "slpi.l"
 {yylval = tokenNode(3, -1, yytext[0]);return DIV;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 15 "slpi.l"
+#line 16 "slpi.l"
 {yylval = tokenNode(3, -1, yytext[0]);return ASSGN;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 16 "slpi.l"
+#line 17 "slpi.l"
 { return *yytext;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 17 "slpi.l"
+#line 18 "slpi.l"
 {yylval = tokenNode(4, 1, '\0');return READ;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 18 "slpi.l"
+#line 19 "slpi.l"
 {yylval = tokenNode(4, 2, '\0'); return WRITE;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 19 "slpi.l"
+#line 20 "slpi.l"
 { yylval = tokenNode(2, -1, yytext[0]); return ID;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 20 "slpi.l"
+#line 21 "slpi.l"
 {}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 21 "slpi.l"
+#line 22 "slpi.l"
 {}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 22 "slpi.l"
+#line 23 "slpi.l"
 {return *yytext;}
 	YY_BREAK
 case 14:
 /* rule 14 can match eol */
 YY_RULE_SETUP
-#line 23 "slpi.l"
+#line 24 "slpi.l"
 {return END;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 24 "slpi.l"
+#line 25 "slpi.l"
 {yyerror("unknown character");exit(1);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 26 "slpi.l"
+#line 27 "slpi.l"
 ECHO;
 	YY_BREAK
-#line 846 "lex.yy.c"
+#line 847 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1843,7 +1844,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 26 "slpi.l"
+#line 27 "slpi.l"
 
 
 

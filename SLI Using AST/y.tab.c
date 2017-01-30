@@ -64,17 +64,23 @@
 /* Copy the first part of user declarations.  */
 #line 1 "slpi.y" /* yacc.c:339  */
 
-	#include <stdio.h>
-	#include <stdlib.h>
+	#include <bits/stdc++.h>
+    using namespace std;
 
 	int vars[30];
-	#include "exptree.h"
-	#include "exptree.c"
+	#include "exptree.hpp"
+	#include "exptree.cpp"
 
-	int yylex(void);
+	int yylex();
 	#define YYSTYPE tnode *
 
-#line 78 "y.tab.c" /* yacc.c:339  */
+	void yyerror(char const *s){
+		printf("yerror %s",s);
+	}
+
+
+
+#line 84 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -151,7 +157,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 155 "y.tab.c" /* yacc.c:358  */
+#line 161 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -449,8 +455,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    21,    21,    23,    24,    26,    27,    28,    31,    32,
-      33,    34,    35
+       0,    27,    27,    29,    30,    32,    33,    34,    37,    38,
+      39,    40,    41
 };
 #endif
 
@@ -1230,73 +1236,73 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 21 "slpi.y" /* yacc.c:1646  */
+#line 27 "slpi.y" /* yacc.c:1646  */
     { evaluate((yyvsp[-1])); exit(1); }
-#line 1236 "y.tab.c" /* yacc.c:1646  */
-    break;
-
-  case 3:
-#line 23 "slpi.y" /* yacc.c:1646  */
-    { (yyval) = createNode(); (yyval)->STMT = -1; (yyval)->ptr1 = (yyvsp[-1]); (yyval)->ptr2 = (yyvsp[0]); }
 #line 1242 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 4:
-#line 24 "slpi.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[0]);}
+  case 3:
+#line 29 "slpi.y" /* yacc.c:1646  */
+    { (yyval) = createNode(); (yyval)->STMT = -1; (yyval)->ptr1 = (yyvsp[-1]); (yyval)->ptr2 = (yyvsp[0]); }
 #line 1248 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 5:
-#line 26 "slpi.y" /* yacc.c:1646  */
-    {(yyvsp[-2])->ptr1 = (yyvsp[-3]); (yyvsp[-2])->ptr2 = (yyvsp[-1]); (yyval) = (yyvsp[-2]); (yyval)->STMT = 1;}
+  case 4:
+#line 30 "slpi.y" /* yacc.c:1646  */
+    { (yyval) = (yyvsp[0]);}
 #line 1254 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 6:
-#line 27 "slpi.y" /* yacc.c:1646  */
-    {(yyvsp[-4])->ptr1 = (yyvsp[-2]); (yyval) = (yyvsp[-4]); (yyval)->STMT = 1;}
+  case 5:
+#line 32 "slpi.y" /* yacc.c:1646  */
+    {(yyvsp[-2])->ptr1 = (yyvsp[-3]); (yyvsp[-2])->ptr2 = (yyvsp[-1]); (yyval) = (yyvsp[-2]); (yyval)->STMT = 1;}
 #line 1260 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 7:
-#line 28 "slpi.y" /* yacc.c:1646  */
+  case 6:
+#line 33 "slpi.y" /* yacc.c:1646  */
     {(yyvsp[-4])->ptr1 = (yyvsp[-2]); (yyval) = (yyvsp[-4]); (yyval)->STMT = 1;}
 #line 1266 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 8:
-#line 31 "slpi.y" /* yacc.c:1646  */
-    { (yyvsp[-1])->ptr1 = (yyvsp[-2]); (yyvsp[-1])->ptr2 = (yyvsp[0]); (yyval) = (yyvsp[-1]); (yyval)->STMT = 2;}
+  case 7:
+#line 34 "slpi.y" /* yacc.c:1646  */
+    {(yyvsp[-4])->ptr1 = (yyvsp[-2]); (yyval) = (yyvsp[-4]); (yyval)->STMT = 1;}
 #line 1272 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 9:
-#line 32 "slpi.y" /* yacc.c:1646  */
+  case 8:
+#line 37 "slpi.y" /* yacc.c:1646  */
     { (yyvsp[-1])->ptr1 = (yyvsp[-2]); (yyvsp[-1])->ptr2 = (yyvsp[0]); (yyval) = (yyvsp[-1]); (yyval)->STMT = 2;}
 #line 1278 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 10:
-#line 33 "slpi.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[-1]); (yyval)->STMT = 2;}
+  case 9:
+#line 38 "slpi.y" /* yacc.c:1646  */
+    { (yyvsp[-1])->ptr1 = (yyvsp[-2]); (yyvsp[-1])->ptr2 = (yyvsp[0]); (yyval) = (yyvsp[-1]); (yyval)->STMT = 2;}
 #line 1284 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 11:
-#line 34 "slpi.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[0]); (yyval)->STMT = 2;}
+  case 10:
+#line 39 "slpi.y" /* yacc.c:1646  */
+    { (yyval) = (yyvsp[-1]); (yyval)->STMT = 2;}
 #line 1290 "y.tab.c" /* yacc.c:1646  */
     break;
 
-  case 12:
-#line 35 "slpi.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[0]); (yyval)->STMT = 2; }
+  case 11:
+#line 40 "slpi.y" /* yacc.c:1646  */
+    { (yyval) = (yyvsp[0]); (yyval)->STMT = 2;}
 #line 1296 "y.tab.c" /* yacc.c:1646  */
     break;
 
+  case 12:
+#line 41 "slpi.y" /* yacc.c:1646  */
+    { (yyval) = (yyvsp[0]); (yyval)->STMT = 2; }
+#line 1302 "y.tab.c" /* yacc.c:1646  */
+    break;
 
-#line 1300 "y.tab.c" /* yacc.c:1646  */
+
+#line 1306 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1524,16 +1530,12 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 38 "slpi.y" /* yacc.c:1906  */
+#line 44 "slpi.y" /* yacc.c:1906  */
 
 
-yyerror(char const *s)
-{
-    printf("yerror %s",s);
-}
 
-
-int main(void) {
+int main(int argc, char *argv[]) {
+	
 	yyparse();
 	return 0;
 }

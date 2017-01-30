@@ -1,13 +1,19 @@
 %{
-	#include <stdio.h>
-	#include <stdlib.h>
+	#include <bits/stdc++.h>
+    using namespace std;
 
 	int vars[30];
-	#include "exptree.h"
-	#include "exptree.c"
+	#include "exptree.hpp"
+	#include "exptree.cpp"
 
-	int yylex(void);
+	int yylex();
 	#define YYSTYPE tnode *
+
+	void yyerror(char const *s){
+		printf("yerror %s",s);
+	}
+
+
 %}
 
 
@@ -36,11 +42,6 @@ E : E PLUS E 	{ $2->ptr1 = $1; $2->ptr2 = $3; $$ = $2; $$->STMT = 2;}
 
 
 %%
-
-yyerror(char const *s)
-{
-    printf("yerror %s",s);
-}
 
 
 int main(int argc, char *argv[]) {
