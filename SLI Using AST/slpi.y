@@ -1,10 +1,9 @@
 %{
 	#include <bits/stdc++.h>
-    using namespace std;
-
 	int vars[30];
-	#include "exptree.hpp"
-	#include "exptree.cpp"
+	#include "exptree.h"
+	#include "exptree.c"
+    using namespace std;
 
 	int yylex();
 	#define YYSTYPE tnode *
