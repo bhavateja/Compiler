@@ -45,81 +45,65 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    MOD = 258,
-    AND = 259,
-    OR = 260,
-    NOT = 261,
-    CONST = 262,
-    TRUE = 263,
-    FALSE = 264,
-    INT = 265,
-    BOOL = 266,
-    DECL = 267,
-    ENDDECL = 268,
-    ENDOFFILE = 269,
-    MAIN = 270,
-    READ = 271,
-    WRITE = 272,
-    IF = 273,
-    THEN = 274,
-    ELSE = 275,
-    ENDIF = 276,
-    WHILE = 277,
-    DO = 278,
-    ENDWHILE = 279,
-    END = 280,
-    NUM = 281,
-    ID = 282,
-    PLUS = 283,
-    MINUS = 284,
-    MUL = 285,
-    DIV = 286,
-    ASSGN = 287,
-    LT = 288,
-    LE = 289,
-    GT = 290,
-    GE = 291,
-    EQ = 292,
-    NEQ = 293
+    INT = 258,
+    DECL = 259,
+    ENDDECL = 260,
+    ENDOFFILE = 261,
+    MAIN = 262,
+    READ = 263,
+    WRITE = 264,
+    IF = 265,
+    THEN = 266,
+    ELSE = 267,
+    ENDIF = 268,
+    WHILE = 269,
+    DO = 270,
+    ENDWHILE = 271,
+    END = 272,
+    NUM = 273,
+    ID = 274,
+    PLUS = 275,
+    MINUS = 276,
+    MUL = 277,
+    DIV = 278,
+    ASSGN = 279,
+    LT = 280,
+    LE = 281,
+    GT = 282,
+    GE = 283,
+    EQ = 284,
+    NEQ = 285
   };
 #endif
 /* Tokens.  */
-#define MOD 258
-#define AND 259
-#define OR 260
-#define NOT 261
-#define CONST 262
-#define TRUE 263
-#define FALSE 264
-#define INT 265
-#define BOOL 266
-#define DECL 267
-#define ENDDECL 268
-#define ENDOFFILE 269
-#define MAIN 270
-#define READ 271
-#define WRITE 272
-#define IF 273
-#define THEN 274
-#define ELSE 275
-#define ENDIF 276
-#define WHILE 277
-#define DO 278
-#define ENDWHILE 279
-#define END 280
-#define NUM 281
-#define ID 282
-#define PLUS 283
-#define MINUS 284
-#define MUL 285
-#define DIV 286
-#define ASSGN 287
-#define LT 288
-#define LE 289
-#define GT 290
-#define GE 291
-#define EQ 292
-#define NEQ 293
+#define INT 258
+#define DECL 259
+#define ENDDECL 260
+#define ENDOFFILE 261
+#define MAIN 262
+#define READ 263
+#define WRITE 264
+#define IF 265
+#define THEN 266
+#define ELSE 267
+#define ENDIF 268
+#define WHILE 269
+#define DO 270
+#define ENDWHILE 271
+#define END 272
+#define NUM 273
+#define ID 274
+#define PLUS 275
+#define MINUS 276
+#define MUL 277
+#define DIV 278
+#define ASSGN 279
+#define LT 280
+#define LE 281
+#define GT 282
+#define GE 283
+#define EQ 284
+#define NEQ 285
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
