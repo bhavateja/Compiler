@@ -1,0 +1,22 @@
+decl
+	int arr[20];
+	int n,k;
+	int b,c,d;
+enddecl
+
+int fact(int x, int y, int z){
+    decl
+        int a;
+    enddecl
+    a = x*y;
+    write(a);
+    return a;
+}
+
+int main(){
+    decl
+        int ab,bc;
+    enddecl
+    write(fact(fact(23,12,22),2,3));
+    return 1;
+}

@@ -1,0 +1,10 @@
+decl
+	int n,k;
+	int b,c,d;
+enddecl
+
+main(){
+    n = 4;
+    k = 3;
+    write(k);
+}

@@ -1,0 +1,15 @@
+decl
+	int n,k,i,arr[20];
+enddecl
+
+main(){
+    read(n);
+    k = 1;
+    while(k<=n) do
+    	read(arr[k]);
+    	k = k+1;
+    endwhile;
+
+
+
+}

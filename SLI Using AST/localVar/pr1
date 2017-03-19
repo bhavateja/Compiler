@@ -1,0 +1,37 @@
+decl
+	int arr[20];
+	int b,c,d;
+enddecl
+
+int main(){
+    decl
+        int n,k;
+    enddecl
+    read(n);
+    k = n;
+    d = 1;
+    while(d<=n)do
+    	read(arr[d]);
+    	d = d+1;
+    endwhile;
+    d = 1;
+    while(d<=n)do
+        c = d+1;
+        while(c<=n)do
+            if(arr[d]>arr[c])then
+        	    b = arr[c];
+                arr[c] = arr[d];
+                arr[d] = b;
+            else
+                k = 0;
+            endif;
+            c = c+1;
+        endwhile;
+        d = d+1;
+    endwhile;
+    d = 1;
+    while(d<=n)do
+        write(arr[d]);
+        d = d+1;
+    endwhile;    
+}
